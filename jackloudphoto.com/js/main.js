@@ -72,7 +72,7 @@ $(function() {
    });
   });
 
-// Display email sign up form 
+// Display email sign up form
 var yes = document.querySelector('.Yes');
 var signup = document.querySelector('.enter-raffle');
 yes.addEventListener('click', function() {

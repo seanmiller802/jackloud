@@ -34,7 +34,7 @@ $(document).ready(function() {
                 if ( ! data.success) {
 
                     if (data.errors) {
-                      $('#inputClass').append('<p class="alert-failure wow fadeIn">Looks there was an error. Make sure all fields are filled in.</p>');
+                      $('#inputClass').append('<p class="alert-failure wow fadeIn">Looks like there was an error. Make sure all fields are filled in.</p>');
                     }
 
                 } else {

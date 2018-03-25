@@ -2,7 +2,7 @@
 var loadButton2 = document.getElementById('load-more2');
 var feed2 = new Instafeed({
   get: 'tagged',
-  tagName: 'camping',
+  tagName: 'blonde',
   userId: '633678483',
   accessToken: '633678483.1677ed0.48e4238ec75a4e2da7a43430f026cae0',
   target: "instafeed2",

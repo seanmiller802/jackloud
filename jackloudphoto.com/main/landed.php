@@ -1,8 +1,7 @@
 <!--load screen-->
 <div id="load_screen" class="text-center">
     <div id="loading" class="text-center">
-      <h5>Loading content...</h5>
-      <i class="fa fa-spinner fa-spin fa-2x fa-fw"></i>
+      <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
     </div>
 </div>
 
@@ -44,7 +43,7 @@
 
     <!--carousel caption and button-->
     <div class="carousel-caption">
-        <h4 class="wow fadeInRight">Photography by Jack Loud</h4>
+        <h2 class="wow fadeInRight">Photography by Jack Loud</h2>
         <a class="btn explore wow fadeIn hvr-hang" href="#about"><i class="fa fa-angle-double-down fa-2x" aria-hidden="true"></i></a>
     </div>
 </div>

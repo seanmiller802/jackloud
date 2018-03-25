@@ -25,13 +25,7 @@ div#load_screen > div#loading {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-#loading h5 {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 1.5em;
-    color: #fff;
-}
-
-#loading > i.fa-spinner {
+#loading i.fa-spinner {
     background-color: transparent;
     color: #4A96AD;
 }
@@ -193,7 +187,7 @@ div#load_screen > div#loading {
 }
 
 .explore { /* explore btn on home page */
-    margin: 5px;
+    margin: 15px 5px;
     -webkit-animation-delay: 1.2s;
     -moz-animation-delay: 1.2s;
     -ms-animation-delay: 1.2s;
@@ -202,19 +196,18 @@ div#load_screen > div#loading {
     cursor: pointer;
     font-family: 'Source Sans Pro', sans-serif;
     background-color: none;
-    color: #FFFFFF;
-}
-
-.explore:hover {
     color: #fff;
 }
 
-.carousel-caption { /* position the carousel-caption in the center of screen */
-    position: absolute;
-    top: 40%;
-    bottom: 50%;
-    padding: 0px;
-    text-align: center;
+.explore:hover {
+    color: grey;
+    background-color: #fff;
+    transition: ease-in-out 1s color;
+    transition: ease-in-out 1s background-color;
+}
+
+.explore:focus {
+    color: #fff;
 }
 
 .carousel-control {  /*position the carousel control arrows*/
@@ -224,14 +217,31 @@ div#load_screen > div#loading {
     color: #FFFFFF;
 }
 
-.carousel-caption h4 {
-    margin-bottom: 5%;
+.carousel-caption { /* position the carousel-caption in the center of screen */
+    position: absolute;
+    top: 40%;
+    bottom: 55%;
+    padding: 0px;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.carousel-caption h2 {
+    margin-bottom: 7%;
     -webkit-animation-delay: 1s;
     -moz-animation-delay: 1s;
     -ms-animation-delay: 1s;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-size: 1.5em;
     color: #FFFFFF;
+}
+
+@media screen and (max-width: 992px) {
+    .carousel-caption h2 {
+        font-size: 1em;
+        margin-bottom: 10%;
+    }
 }
 
 /*################################# BIO PAGE ###################################*/
@@ -256,24 +266,24 @@ div#load_screen > div#loading {
 .jack-face h3 {
     font-family: 'Source Sans Pro', sans-serif;
     color: #fff;
+    /*border: 1px solid red;*/
 }
 
 .jack-face p {
     width: 40%;
     margin: auto;
     margin-bottom: 0px;
-    padding: 1%;
-    font-size: 1.25em;
+    padding: 15px;
+    font-size: 1em;
     font-family: 'Open Sans', sans-serif;
     color: #F5F3EE;
     /*border: 1px solid #fff;*/
 }
 
 .jack-face h5 {
-    width: 80%;
-    margin: auto;
     font-family: 'Open Sans', sans-serif;
     color: lightgrey;
+    /*border: 1px solid green;*/
 }
 
 .jack-face a {
@@ -307,17 +317,19 @@ div#load_screen > div#loading {
     border-radius: 50%;
   }
 
-  .jack-face h4 {
+  .jack-face h3 {
     margin-bottom: 2%;
   }
 
   .jack-face p {
-    width: 80%;
+    width: 90%;
     margin: auto;
+    font-size: 1.1em;
   }
 
-  .jack-face h6 {
-    margin-top: 8%;
+  .jack-face h5 {
+      width: 80%;
+      margin: auto;
   }
 
   .slantedDivA:after {
@@ -340,7 +352,7 @@ div#load_screen > div#loading {
     width: 80%;
     margin: auto;
     margin-top: 3%;
-    margin-bottom: 3%;
+    margin-bottom: 4%;
     padding: 0%;
     text-align: center;
     font-family: 'Source Sans Pro', sans-serif;
@@ -359,11 +371,17 @@ div#load_screen > div#loading {
 }
 
 .gal-btn {
-    padding: 2%;
-    border: none;
+    margin-left: 7.5px;
+    margin-right: 7.5px;
+    border: lightgrey;
     border-radius: 0px;
     font-family: 'Open Sans', sans-serif;
     background: none;
+}
+
+.gal-btn:hover {
+    color: #4A96AD;
+    transition: ease-in-out .3s color;
 }
 
 .gal-btn:focus {
@@ -372,7 +390,13 @@ div#load_screen > div#loading {
 
 .toggled { // add this to which ever photo gallery is selected
     font-family: 'Open Sans', sans-serif;
+    font-style: italic;
     border-bottom: 2px solid #4A96AD;
+    color: #000;
+}
+
+.toggled:hover {
+    color: #000;
 }
 
 .photos-wrap {
@@ -402,6 +426,7 @@ div#load_screen > div#loading {
     width: 100%;
     height: auto;
     max-height: 100%;
+    position: relative;
     padding: none;
     background-color: lightgrey;
     /*border: 1px solid red;*/
@@ -419,22 +444,18 @@ div#load_screen > div#loading {
 }
 
 .image-wrap a {
-    height: 100%;
     width: 100%;
+    height: 100%;
     margin: 0px;
     padding: none;
-
     /*border: 1px solid red;*/
 }
-/*######################################################################*/
-/*################################## FIX THIS SHIT #####################*/
-/*######################################################################*/
+
  p.likes {
     width: 100%;
-    vertical-align: middle;
-    position: relative;
-    bottom: 50%;
-    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    bottom: -10%;
     text-align: center;
     font-family: 'Open Sans', sans-serif;
     color: #fff;
@@ -442,8 +463,9 @@ div#load_screen > div#loading {
 }
 
 .photo-box:hover p.likes {
-    visibility: visible;
-    font-family: 'Open Sans', sans-serif;
+    opacity: 1;
+    bottom: 45%;
+    transition: ease-in-out .8s opacity;
     color: #fff;
 }
 /*#################################################################*/
@@ -467,9 +489,9 @@ div#load_screen > div#loading {
 }
 
 @media screen and (max-width: 992px) {
-  .instagram-content h5 {
+  .instagram-content h3 {
       margin-top: 5%;
-      margin-bottom: 10%;
+      margin-bottom: 7%;
   }
 
   #gallery {
@@ -516,7 +538,7 @@ section#contact .container {
     padding-top: 1%;
     margin-top: 2%;
     font-weight: bold;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-size: 1.25em;
     color: #393E46;
     /*border: 1px solid red;*/
@@ -542,6 +564,7 @@ section#contact .container {
 .social-bar button,
 .social-bar a {
     color: #393E46;
+    transition: ease-in-out .5s background-color;
 }
 
 /** Tooltip Styles */
@@ -608,15 +631,15 @@ section#contact .container {
 /* Base styles for the tooltip's content area */
 .tooltip:after,
 [data-tooltip]:after {
-  z-index: 1000;
-  padding: 8px;
-  width: 160px;
-  background-color: #000;
-  background-color: hsla(0, 0%, 20%, 0.9);
-  color: #fff;
-  content: attr(data-tooltip);
-  font-size: 14px;
-  line-height: 1.2;
+    z-index: 1000;
+    padding: 8px;
+    width: 160px;
+    background-color: #000;
+    background-color: hsla(0, 0%, 20%, 0.9);
+    color: #fff;
+    content: attr(data-tooltip);
+    font-size: 14px;
+    line-height: 1.2;
 }
 
 /* Directions */
@@ -688,7 +711,6 @@ section#contact .form-group input.form-control {
 section#contact .form-group input:focus {
     font-weight: bold;
     box-shadow: none;
-    background-color: #4A96AD;
     color: #000;
 }
 
@@ -703,10 +725,9 @@ section#contact .form-group textarea.form-control {
 }
 
 section#contact .form-group textarea:focus {
-    color: #000;
     font-weight: bold;
     box-shadow: none;
-    background-color: #393E46;
+    color: #000;
 }
 
 #inputClass {
@@ -736,23 +757,35 @@ section#contact .form-group textarea:focus {
 }
 
 .Yes {
+    position: relative;
     margin-top: 7%;
-    border-radius: 2px;
-    background-color: #393E46;
-    border: 1px solid #393E46;
+    padding: 9px;
+    font-size: 0.9em;
     font-family: 'Open Sans', sans-serif;
-    color: #F2F2F2;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    border: 1px solid #fff;
+    background-color: #393E46;
+    color: #fff;
 }
 
 .Yes:hover {
-    opacity: .9;
+    box-shadow: none;
+    transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
     background-color: #393E46;
-    border: 1px solid #393E46;
 }
 
 .Yes:focus {
     outline: 0;
     border: none;
+    background-color: #393E46;
+}
+
+.hvr-icon-wobble-horizontal:hover { /* keep the color from being changed to black */
+    color: #fff;
 }
 
 .enter-raffle {
@@ -817,11 +850,18 @@ section#contact .form-group textarea:focus {
         margin-bottom: 2%;
     }
 
-    .enter-raffle {
-        margin-top: 100px;
-        margin-bottom: 100px;
+    .Yes {
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 15%;
+        margin-bottom: 15%;
     }
 
+    .enter-raffle {
+        margin-top: 75px;
+        margin-bottom: 75px;
+    }
 }
 
 .row3 {
@@ -867,7 +907,7 @@ p.alert-failure { /* error message for forms */
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
-    font-size: 1.2em;
+    font-size: .8em;
     color: grey;
     /*border: 1px solid blue;*/
 }
